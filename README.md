@@ -18,6 +18,7 @@ stored.
 P
 ## PROGRAM - ARP
 ### SERVER.PY
+```
 import socket
 s=socket.socket() 
 s.bind(('localhost',8000)) 
@@ -31,7 +32,9 @@ while True:
         c.send(address[ip].encode())
     except KeyError:
         c.send("Not Found".encode())
+```
 ### CLIENT.PY
+```
 import socket 
 s=socket.socket() 
 s.connect(('localhost',8000)) 
@@ -39,10 +42,12 @@ while True:
     ip=input("\nEnter IP Address of your device : ")
     s.send(ip.encode())
     print("\nMAC Address Of your device :",s.recv(1024).decode())
+```
 ## OUPUT - ARP
 <img width="526" height="280" alt="592527738-ab8c80ee-2d88-4039-a463-99e32da5aad7" src="https://github.com/user-attachments/assets/8171503e-d94a-45e9-81ad-21d9c4980483" />
 ## PROGRAM - RARP
 ### SERVER.PY
+```
 import socket
 s=socket.socket() 
 s.bind(('localhost',8000)) 
@@ -56,7 +61,9 @@ while True:
         c.send(address[mac].encode())
     except KeyError:
         c.send("Not Found".encode())
+```
 ### CLIENT.PY
+```
 import socket 
 s=socket.socket() 
 s.connect(('localhost',8000)) 
@@ -64,6 +71,7 @@ while True:
     mac=input("\nEnter MAC Address of your device : ")
     s.send(mac.encode())
     print("\nIP Address Of your device :",s.recv(1024).decode())
+```
 ## OUPUT -RARP
 <img width="540" height="306" alt="592527078-9ed751dd-e6d8-4422-9642-656b32c2c32b" src="https://github.com/user-attachments/assets/01517bc6-18e2-4278-9595-9ac41c69dece" />
 ## RESULT
