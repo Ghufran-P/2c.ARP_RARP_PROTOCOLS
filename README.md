@@ -45,6 +45,7 @@ while True:
 ```
 ## OUPUT - ARP
 <img width="526" height="280" alt="592527738-ab8c80ee-2d88-4039-a463-99e32da5aad7" src="https://github.com/user-attachments/assets/8171503e-d94a-45e9-81ad-21d9c4980483" />
+
 ## PROGRAM - RARP
 ### SERVER.PY
 ```
